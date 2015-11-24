@@ -1,6 +1,6 @@
-# tex-pdf > master
+# mapXmlAndPdf
 
-** PDFからレイアウト情報を抽出してXMLに埋め込みます **
+**PDFからレイアウト情報を抽出してXMLに埋め込みます**
 
 mapXmlAndPdfは文章のレイアウト情報をXMLに埋め込むためのツールです。
 例えばXHTMLドキュメントと、それをPDF形式で保存したファイルを指定すると、
