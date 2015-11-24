@@ -56,7 +56,19 @@ mapXmlAndPdf (src xml path) (src pdf path) (dst dirpath)
 既にあれば上書きします。
 
 XMLとPDFは指定したディレクトリからの相対位置が同じで拡張子を除いたファイル名が一致するものが一組として処理します。
-たとえば、(src xml path)/2015/1/abc.xmlと(src pdf math)/2015/1/abc.pdfを処理した結果を(dst dirpath)/2015/1/abc.xmlに出力します。
+たとえば、
+
+(src xml path)/2015/1/abc.xml
+
+と
+
+(src pdf math)/2015/1/abc.pdf
+
+を処理した結果を
+
+(dst dirpath)/2015/1/abc.xml
+
+に出力します。
 
 ### 詳細な設定
 
