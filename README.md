@@ -19,12 +19,14 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 * 適当なディレクトリにファイル群を展開してください
 * 以下の依存パッケージを導入してください。
-  * [ppoppler & poppler-data](http://poppler.freedesktop.org/)
+  * [poppler & poppler-data](http://poppler.freedesktop.org/)
   * [KyotoCabinet](http://fallabs.com/kyotocabinet/)
   * perl
     * [List::BinarySearch::XS](http://search.cpan.org/~davido/List-BinarySearch-XS-0.09/lib/List/BinarySearch/XS.pm)
-* 実行時にenvコマンドを使用するなどして、環境変数PERL5LIBに展開されたnii.xml-pdfディレクトリを追加してください。
+* 展開されたnii.xml-pdfディレクトリを環境変数PERL5LIBに追加してください。
+```
 例) env PERL5LIB=~/programs/mapXmlAndPdf/nii.xml-pdf/ ~/programs/mapXmlAndPdf/mapXmlAndPdf
+```
 
 ## 実行方法
 
