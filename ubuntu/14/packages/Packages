@@ -1,0 +1,18 @@
+Package: nii-xml-pdf
+Priority: optional
+Section: unknown
+Installed-Size: 141
+Maintainer: tkana <tkana@kyagroup.com>
+Architecture: all
+Version: 1.0.0-1
+Depends: libyaml-perl, nii-xml-pdf-kyotocabinet-perl, libkyotocabinet-dev, libkyotocabinet16, libxml-libxml-perl
+Filename: ./nii-xml-pdf_1.0.0-1_all.deb
+Size: 17758
+MD5sum: 340f60b0769e6040ca8e0547b725d6f8
+SHA1: efeb20354b6663bea24a8f98ba74611742d9825c
+SHA256: 799a3846d421802f7e9aa04868779e7b7c1b47db1f62fb36394ef11baeec4ec5
+SHA512: ed7fea265cd787383d3c81d84b3ff484a5a11d3aef8d2dc37ccea8e04d8f516c8692eecdd62e0cd22c3ddd67d816a9bbdc6a858a88d0adf39e325de457d66643
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+Homepage: <insert the upstream URL, if relevant>
+
