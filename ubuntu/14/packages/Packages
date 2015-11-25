@@ -14,7 +14,6 @@ SHA256: 352a5e6686984e6d0b316811b0c45f4b4163792d666c95817782d25d421b920c
 SHA512: 09915ff9ca8e9433737d51f1646988e5bd64847a7590152e13a876caf26f7c9aff5204f0cf61719df97111f4620f382fcf93cb358a40406e98d3849225380dee
 Description: Package created with checkinstall 1.6.2
 
-
 Package: nii-xml-pdf
 Priority: optional
 Section: unknown
@@ -24,12 +23,13 @@ Architecture: all
 Version: 1.0.0-1
 Depends: libyaml-perl, nii-xml-pdf-kyotocabinet-perl, libkyotocabinet-dev, libkyotocabinet16, libxml-libxml-perl
 Filename: ./nii-xml-pdf_1.0.0-1_all.deb
-Size: 17758
-MD5sum: 340f60b0769e6040ca8e0547b725d6f8
-SHA1: efeb20354b6663bea24a8f98ba74611742d9825c
-SHA256: 799a3846d421802f7e9aa04868779e7b7c1b47db1f62fb36394ef11baeec4ec5
-SHA512: ed7fea265cd787383d3c81d84b3ff484a5a11d3aef8d2dc37ccea8e04d8f516c8692eecdd62e0cd22c3ddd67d816a9bbdc6a858a88d0adf39e325de457d66643
+Size: 17766
+MD5sum: 98a1ab2b6d4504d2555d7ebfcbf34305
+SHA1: b5f42ae6dd00c9875906898e24b0abb2816bd24e
+SHA256: 49229fd0eddb047e2f03f4a2bd3144985ee2ede436dddf932a3e405c913f0db7
+SHA512: 8fe1f083ccb27ade14de732c26b97c53470782703771fb1b69884da72a9845f73928f620d7bc59978dcda41336b0c0c57a42f3c2931bd22e7a3fa9788a47a2bb
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 Homepage: <insert the upstream URL, if relevant>
+
 
