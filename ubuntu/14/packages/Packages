@@ -6,7 +6,7 @@ Maintainer: tkana@kyagroup.com
 Architecture: amd64
 Version: 1.20-1
 Provides: nii-xml-pdf-kyotocabinet-perl
-Filename: /home/GITWORKS-DPKG/build-packages-deb/kyotocabinet-perl/nii-xml-pdf-kyotocabinet-perl-1.20/nii-xml-pdf-kyotocabinet-perl_1.20-1_amd64.deb
+Filename: ./nii-xml-pdf-kyotocabinet-perl_1.20-1_amd64.deb
 Size: 57274
 MD5sum: 350c7a7d7f2bf4c2185f90cd6782d8fa
 SHA1: 3c75d1d37d67f0f89c7321c62c483c91853383d6
