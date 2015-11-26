@@ -13,18 +13,17 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 ### Ubuntu 14
 
 1. 管理者権限で以下の内容のファイルを /etc/apt/sources.list.d/nii-xml-pdf.list として作成してください。
-```
-deb https://raw.githubusercontent.com/usuratonkachi7610/xp/master/ubuntu/14/packages ./
-```
-2. 管理者権限で以下のコマンドを実行してください。
-```
-apt-get update
-apt-get install nii-tex-pdf
-```
+
+        deb https://raw.githubusercontent.com/usuratonkachi7610/xp/master/ubuntu/14/packages ./
+1. 管理者権限で以下のコマンドを実行してください。
+
+        apt-get update
+        apt-get install nii-tex-pdf
 次のようなメッセージ（署名なしのパッケージをインストールすることの警告）が表示されるのでyを入力してください。
-WARNING: The following packages cannot be authenticated!
-  nii-xml-pdf-kyotocabinet-perl nii-xml-pdf
-Install these packages without verification? [y/N]
+
+        WARNING: The following packages cannot be authenticated!
+          nii-xml-pdf-kyotocabinet-perl nii-xml-pdf
+        Install these packages without verification? [y/N]
 
 ### CentOS 7
 
