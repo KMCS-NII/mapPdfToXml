@@ -35,7 +35,10 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 ### それ以外
 
-1. 適当なディレクトリにファイル群を展開してください
+1. 適当なディレクトリにsources/以下のファイル群を展開してください。
+svnコマンドが利用可能な環境では以下を実行してください。
+
+        svn export https://github.com/usuratonkachi7610/xp/sources
 1. 以下の依存パッケージを導入してください。
   * [poppler & poppler-data](http://poppler.freedesktop.org/)
   * [KyotoCabinet & perl module](http://fallabs.com/kyotocabinet/)
