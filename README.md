@@ -25,13 +25,13 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
           nii-xml-pdf-kyotocabinet-perl nii-xml-pdf
         Install these packages without verification? [y/N]
 
-### CentOS 7
+### CentOS 6, 7
 
-(TBW)
+1. 管理者権限で以下のコマンドを実行してください。
 
-### CentOS 6
-
-(TBW)
+        rpm -i https://raw.githubusercontent.com/usuratonkachi7610/xp/master/centos/nii-xml-pdf-repo-1-1.noarch.rpm
+        install --enablerepo=nii-xml-pdf nii-xml-pdf
+Perlのモジュールのインストールに数分を要します。
 
 ### それ以外
 
