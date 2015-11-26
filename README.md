@@ -35,8 +35,8 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 ### それ以外
 
-* 適当なディレクトリにファイル群を展開してください
-* 以下の依存パッケージを導入してください。
+1. 適当なディレクトリにファイル群を展開してください
+1. 以下の依存パッケージを導入してください。
   * [poppler & poppler-data](http://poppler.freedesktop.org/)
   * [KyotoCabinet & perl module](http://fallabs.com/kyotocabinet/)
   * perl
@@ -45,11 +45,9 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
     * List::BinarySearch::XS
     * Unicode::Normalize
     * XML::LibXML
-    
-* 展開されたnii.xml-pdfディレクトリを環境変数PERL5LIBに追加してください。
-```
-例) env PERL5LIB=~/programs/mapXmlAndPdf/nii.xml-pdf/ ~/programs/mapXmlAndPdf/mapXmlAndPdf
-```
+1. 展開されたnii.xml-pdfディレクトリを環境変数PERL5LIBに追加してください。
+
+        例) env PERL5LIB=~/programs/mapXmlAndPdf/nii.xml-pdf/ ~/programs/mapXmlAndPdf/mapXmlAndPdf
 
 ## 実行方法
 
@@ -78,7 +76,7 @@ XMLとPDFは指定したディレクトリからの相対位置が同じで拡�
 
 と
 
-(src pdf math)/2015/1/abc.pdf
+(src pdf path)/2015/1/abc.pdf
 
 を処理した結果を
 
@@ -110,9 +108,9 @@ XMLとPDFは指定したディレクトリからの相対位置が同じで拡�
 ```
 という対応関係をTSVで記載したファイルを用意して以下のパラメータを指定してください。
 ```
---map-file=(ファイルパス) 
+--map-file=(対応リストTSVのファイルパス) 
 ```
-「相対ファイルパス」には拡張子まで含めて記述してください。
+TSV中の「相対ファイルパス」には拡張子まで含めて記述してください。
 出力ファイル名はPDFのファイル名の拡張子を変えたものになります。
 
 #### PDFとは対応関係にないXML要素を指定する
