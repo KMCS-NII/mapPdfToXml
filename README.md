@@ -55,7 +55,7 @@ svnコマンドが利用可能な環境では以下を実行してください�
 
 ## 実行方法
 
-XMLファイルとPDFファイルを用意して、コマンドラインから次のように実行します。
+XMLファイルとPDFファイルを用意して、コマンドラインから次のように実行してください。
 
 ```
 mapXmlAndPdf (src xml path) (src pdf path) (dst dirpath)
@@ -138,51 +138,52 @@ head要素も処理対象に含めたい場合は
 * PDFでは文字列をバウンダリ(Boundary)とよばれる矩形の領域の集合として扱っています。
 本ツールはバウンダリを単位としてXMLの文字列との対応関係を推定します。
 * PDFのバウンダリと対応しているXMLの文字列はpdf:span要素で囲まれます。
-名前空間pdfのURIはhttp://kmcs.nii.ac.jp/#nsです。
-* pdf:span要素には以下の属性でレイアウト情報が埋め込まれます。
-  * pdf:boundarytype : 領域の種類。現状、必ず「text」です。
-  * pdf:boundaryid : バウンダリの通し番号（1始まり）
-  * pdf:boundarysequence : П寺内でのバウンダリ番号（0始まり）
-  * pdf:fontcolor　: 文字列の色。#RRGGBB形式の文字列です。
-  * pdf:fontfamily : 「ＭＳ明朝」などのフォント名。
-和英の合成フォントの場合、「EDLXCL+RyuminPro-Light-Identity-H」のように「+」を挟んで複数のフォント名が併記されることがあります。
-属性自体の無い場合があります。
-  * pdf:fontsize : 文字の大きさ。0の場合や、属性自体のない場合があります
+名前空間pdfのURIはhttp://kmcs.nii.ac.jp/#ns です。
+* pdf:span要素にはレイアウト情報が以下の属性として埋め込まれます。
+  * pdf:boundarytype : バウンダリの種類。現状、必ず「text」です。
+  * pdf:boundaryid : バウンダリの通し番号（1始まり）。
+  * pdf:boundarysequence : ページ内でのバウンダリ番号（0始まり）。
   * pdf:page : ページ番号。
   * pdf:text : 文字列。
   * pdf:left : バウンダリの左端座標。
   * pdf:top : バウンダリの上端座標。
-  * pdf:width : バウンダリの幅
+  * pdf:width : バウンダリの幅。
   * pdf:height : バウンダリの高さ。
+  * pdf:fontcolor　: 文字列の色。#RRGGBB形式の文字列です。
+  * pdf:fontfamily : 「ＭＳ明朝」などのフォント名。
+和英の合成フォントの場合、「EDLXCL+RyuminPro-Light-Identity-H」のように「+」を挟んで複数のフォント名が併記されることがあります。
+属性自体が無い場合もあります。
+  * pdf:fontsize : 文字の大きさ。0の場合や、属性自体がない場合もあります。
 * 座標、大きさはポイント他陰萎です。
+* 対応する文字列がXML中に見つからなかったPDFバウンダリも、pdf:span要素として埋め込まれます。このpdf:span要素は文字列を囲みません。
 
 * 対応するPDFのバウンダリが見つからなかったXMLの文字列はpdf:unmapped要素で囲まれます。
 
 ### 出力例
 
-例として、次のXHTMLに対してPDFの領域情報をマッピングさせる場合を考える。
+例として、次のXHTMLに対してPDFの領域情報をマッピングさせる場合を考えます。
 ```
 <span>いろはにほへとちりぬるを</span><span>わかよたれそ</span>
 ```
 
-* XHTML要素とPDFの領域が一致する場合、XHTMLの要素の中にPDFバウンダリ情報の要素を挿入する
+* XHTML要素とPDFの領域が一致する場合、XHTMLの要素の中にPDFバウンダリ情報の要素を挿入します。
 
         <span><pdf:span>いろはにほへとちりぬるを</pdf:span></span><span><pdf:span>わかよたれそ</pdf:span></span>
 
-* 複数のXHTML要素と一つのPDFバウンダリが一致する場合、PDFバウンダリを分割してXHTMLの要素の中にPDFバウンダリ情報の要素を挿入する。分割領域の大きさはPDF側で数えた文字数に比例させる。
+* 複数のXHTML要素と一つのPDFバウンダリが一致する場合、PDFバウンダリを分割してXHTMLの要素の中にPDFバウンダリ情報の要素を挿入します。分割領域の大きさはPDF側で数えた文字数に比例します。
 
-* 一つのXHTML要素と複数のPDFバウンダリが一致する場合、XHTML要素の中にPDFバウンダリ情報の要素を挿入する
+* 一つのXHTML要素と複数のPDFバウンダリが一致する場合、XHTML要素の中にPDFバウンダリ情報の要素を挿入します。
 
         <span><pdf:span>いろはにほへと</pdf:span><pdf:span>ちりぬるを</pdf:span></span><span><pdf:span>わかよたれそ</pdf:span></span>
 
-* いずれのPDFバウンダリにも一致しないXHTMLの部分文字列は、pdf:unmapped要素となる。
+* いずれのPDFバウンダリにも一致しないXHTMLの部分文字列は、pdf:unmapped要素となります。
 
         <span><pdf:unmapped>いろはに</pdf:unmapped><pdf:span>ほへとちりぬるを</pdf:span></span><span><pdf:span>わかよたれそ</pdf:span></span>
 
-* いずれのXHTML要素にも一致しないPDFバウンダリは、text()を持たない要素として挿入する。
-挿入位置は、直前のPDFバウンダリが一致したXHTML要素の直後とする
+* いずれのXHTML文字列にも一致しないPDFバウンダリは、文字列を囲まないpdf:span要素として挿入します。
+挿入位置は、直前のPDFバウンダリが一致したXHTML要素の直後とします。
 
-        <span><pdf:span>いろはにほへとちりぬるを</pdf:span></span><pdf:span unmappedString="とりなくこえす"/><span><pdf:span>わかよたれそ</pdf:span></span>
+        <span><pdf:span>いろはにほへとちりぬるを</pdf:span></span><pdf:span text="とりなくこえす"/><span><pdf:span>わかよたれそ</pdf:span></span>
 
 ## ライセンス
 
