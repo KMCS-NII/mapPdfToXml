@@ -22,8 +22,7 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 <p>
  <em>
-  This section describes the status of this document at the time of its publication. Other documents may supersede this document. The latest status of this document series is maintained at the
-W3C.
+  This section describes the status of this document at the time of its publication. Other documents may supersede this document. The latest status of this document series is maintained at the W3C.
  </em>
 </p>
 :
