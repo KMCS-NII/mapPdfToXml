@@ -8,6 +8,48 @@ mapXmlAndPdfは文章のレイアウト情報をXMLに埋め込むためのツ�
 XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、ページ番号、
 フォント情報などを元のXHTMLの要素に埋め込んだファイルを生成します。
 
+http://www.w3.org/TR/2002/REC-xhtml1-20020801/
+```html
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+:
+:
+<h2>
+ <a name="status" id="status"></a>
+ Status of this document
+</h2>
+
+<p>
+ <em>
+  This section describes the status of this document at the time of its publication. Other documents may supersede this document. The latest status of this document series is maintained at the
+W3C.
+ </em>
+</p>
+```
+
+をブラウザでPDFに変換して出力したものを用意して本ツールで処理すると、次のような結果が得られます。(比較のため入力、出力ともに改行、インデントを追加しています)
+```html
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:pdf="http://kmcs.nii.ac.jp/#ns" xml:lang="en">
+:
+:
+<h2>
+ <a id="status" name="status"></a>
+ <pdf:span pdf:boundaryid="59" pdf:boundarysequence="58" pdf:boundarytype="text" pdf:fontcolor="#000000" pdf:fontfamily="CZKWDF+LiberationSans-Bold" pdf:fontsize="13.5" pdf:height="16.5" pdf:left="60" pdf:page="1" pdf:text="Status of this document" pdf:top="583" pdf:width="166.5">Status of this document</pdf:span>
+</h2>
+
+<p>
+ <em>
+  <pdf:span pdf:boundaryid="60" pdf:boundarysequence="59" pdf:boundarytype="text" pdf:fontcolor="#000000" pdf:fontfamily="TCYTND+LiberationSans-Italic" pdf:fontsize="8.5" pdf:height="11" pdf:left="60" pdf:page="1" pdf:text="This section describes the status of this document at the time of its publication. Other documents may supersede" pdf:top="612.5" pdf:width="486">This section describes the status of this document at the time of its publication. Other documents may supersede </pdf:span>
+  <pdf:span pdf:boundaryid="61" pdf:boundarysequence="60" pdf:boundarytype="text" pdf:fontcolor="#000000" pdf:fontfamily="TCYTND+LiberationSans-Italic" pdf:fontsize="8.5" pdf:height="11" pdf:left="60" pdf:page="1" pdf:text="this document. The latest status of this document series is maintained at the W3C." pdf:top="624.5" pdf:width="355">this document. The latest status of this document series is maintained at the W3C.</pdf:span>
+ </em>
+</p>
+:
+:
+```
+
 ## インストール
 
 ### Ubuntu 14
