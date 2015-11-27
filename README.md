@@ -8,7 +8,7 @@ mapXmlAndPdfは文章のレイアウト情報をXMLに埋め込むためのツ�
 XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、ページ番号、
 フォント情報などを元のXHTMLの要素に埋め込んだファイルを生成します。
 
-http://www.w3.org/TR/2002/REC-xhtml1-20020801/
+▼ http://www.w3.org/TR/2002/REC-xhtml1-20020801/
 ```html
 <?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -26,6 +26,7 @@ http://www.w3.org/TR/2002/REC-xhtml1-20020801/
 W3C.
  </em>
 </p>
+:
 ```
 
 をブラウザでPDFに変換して出力したものを用意して本ツールで処理すると、次のような結果が得られます。(比較のため入力、出力ともに改行、インデントを追加しています)
@@ -46,7 +47,6 @@ W3C.
   <pdf:span pdf:boundaryid="61" pdf:boundarysequence="60" pdf:boundarytype="text" pdf:fontcolor="#000000" pdf:fontfamily="TCYTND+LiberationSans-Italic" pdf:fontsize="8.5" pdf:height="11" pdf:left="60" pdf:page="1" pdf:text="this document. The latest status of this document series is maintained at the W3C." pdf:top="624.5" pdf:width="355">this document. The latest status of this document series is maintained at the W3C.</pdf:span>
  </em>
 </p>
-:
 :
 ```
 
@@ -176,7 +176,7 @@ head要素も処理対象に含めたい場合は
 
 ## 出力情報の仕様
 
-* 出力されるXMLは、入力XMLのDOM構造を基本的に維持したものです。
+* 出力されるXMLは、入力XMLのDOM構造にPDF情報を追加したものです。
 * PDFでは文字列をバウンダリ(Boundary)とよばれる矩形の領域の集合として扱っています。
 本ツールはバウンダリを単位としてXMLの文字列との対応関係を推定します。
 * PDFのバウンダリと対応しているXMLの文字列はpdf:span要素で囲まれます。
