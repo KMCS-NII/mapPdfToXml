@@ -55,7 +55,7 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 1. 管理者権限で以下の内容のファイルを /etc/apt/sources.list.d/nii-xml-pdf.list として作成してください。
 
-        deb https://raw.githubusercontent.com/usuratonkachi7610/xp/master/ubuntu/14/packages ./
+        deb https://raw.githubusercontent.com/KMCS-NII/mapPdfToXml/master/ubuntu/14/packages ./
 1. 管理者権限で以下のコマンドを実行してください。
 
         apt-get update
@@ -70,7 +70,7 @@ XHTMLの要素に対応するPDFの文字列領域を探して領域の座標、
 
 1. 管理者権限で以下のコマンドを実行してください。
 
-        rpm -i https://raw.githubusercontent.com/usuratonkachi7610/xp/master/centos/nii-xml-pdf-repo-1-1.noarch.rpm
+        rpm -i https://raw.githubusercontent.com/KMCS-NII/mapPdfToXml/master/centos/nii-xml-pdf-repo-1-1.noarch.rpm
         yum install --enablerepo=nii-xml-pdf nii-xml-pdf
 Perlのモジュールのインストールに数分を要します。
 
@@ -80,7 +80,7 @@ Perlのモジュールのインストールに数分を要します。
 svnコマンドが利用可能な環境では以下を実行してください。
 カレントディレクトリにmapPdfToXmlサブディレクトリが作成されます。
 
-        svn export https://github.com/usuratonkachi7610/xp/trunk/sources mapPdfToXml
+        svn export https://github.com/KMCS-NII/mapPdfToXml/trunk/sources mapPdfToXml
 1. 以下の依存パッケージを導入してください。
   * [poppler & poppler-data](http://poppler.freedesktop.org/)
   * [KyotoCabinet & perl module](http://fallabs.com/kyotocabinet/)

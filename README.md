@@ -54,7 +54,7 @@ and its saved-as-PDF file, the XHTML described below will generated.
 
 1. Save the line below as /etc/apt/sources.list.d/nii-xml-pdf.list. Administrative privileges are required.
 
-        deb https://raw.githubusercontent.com/usuratonkachi7610/xp/master/ubuntu/14/packages ./
+        deb https://raw.githubusercontent.com/KMCS-NII/mapPdfToXml/master/ubuntu/14/packages ./
 1. Type following commands as the root user:
 
         apt-get update
@@ -69,7 +69,7 @@ Enter "y" for the message below:
 
 1. Type following commands as the root user:
 
-        rpm -i https://raw.githubusercontent.com/usuratonkachi7610/xp/master/centos/nii-xml-pdf-repo-1-1.noarch.rpm
+        rpm -i https://raw.githubusercontent.com/KMCS-NII/mapPdfToXml/master/centos/nii-xml-pdf-repo-1-1.noarch.rpm
         yum install --enablerepo=nii-xml-pdf nii-xml-pdf
 It may take several minutes to install perl modules.
 
@@ -78,7 +78,7 @@ It may take several minutes to install perl modules.
 1. Copy ```sources/``` to your system.
 If subversion (svn) is available in your system, typing command below will create mapPdfToXml directory under the current directory.
 
-        svn export https://github.com/usuratonkachi7610/xp/trunk/sources mapPdfToXml
+        svn export https://github.com/KMCS-NII/mapPdfToXml/trunk/sources mapPdfToXml
 1. Install packages listed below:
   * [poppler & poppler-data](http://poppler.freedesktop.org/)
   * [KyotoCabinet & perl module](http://fallabs.com/kyotocabinet/)
