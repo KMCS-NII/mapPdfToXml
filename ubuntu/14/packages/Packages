@@ -1,67 +1,51 @@
-Package: liblist-binarysearch-xs-perl
-Priority: optional
-Section: perl
-Installed-Size: 101
-Maintainer: tkana <tkana@kyagroup.com>
-Architecture: amd64
-Version: 0.09-1
-Depends: perl (>= 5.18.2-2ubuntu1), perlapi-5.18.2, libc6 (>= 2.2.5)
-Filename: ./liblist-binarysearch-xs-perl_0.09-1_amd64.deb
-Size: 19268
-MD5sum: 35bcecfa076e192e299f7ce9f0b341fc
-SHA1: c08de6d57bbd21578c677ffb63f9a8088c1d8d31
-SHA256: 3de0a2de508480520effe17ff0495478c4f19edc73028d28c45b6b8213febfd7
-SHA512: d01da40f0ada683e82fe2bfab3cbd6f7b93bba764444e92ff298a6fd1fb33f95f9955e06a83ff7ac71d8974f7d817aecdbb23b9b4f6a77023e9aba0489d39992
-Description: Binary Search a sorted array with XS routines.
- A binary search searches sorted lists using a divide and conquer technique.
- On each iteration the search domain is cut in half, until the result is
- found. The computational complexity of a binary search is O(log n).
- .
- List::BinarySearch::XS implements several Binary Search algorithms using XS
- code for optimal performance. You are free to use this module directly, or as
- a plugin for the more general List::BinarySearch.
- .
- The binary search algorithm implemented in this module is known as a Deferred
- Detection Binary Search. Deferred Detection provides stable searches. Stable
- binary search algorithms have the following characteristics, contrasted with
- their unstable binary search cousins:
- .
- This description was automagically extracted from the module by dh-make-perl.
-Homepage: https://metacpan.org/release/List-BinarySearch-XS
-
-
-Package: nii-xml-pdf-kyotocabinet-perl
-Priority: extra
-Section: checkinstall
-Installed-Size: 320
-Maintainer: tkana@kyagroup.com
-Architecture: amd64
-Version: 1.20-1
-Provides: nii-xml-pdf-kyotocabinet-perl
-Filename: ./nii-xml-pdf-kyotocabinet-perl_1.20-1_amd64.deb
-Size: 57274
-MD5sum: 350c7a7d7f2bf4c2185f90cd6782d8fa
-SHA1: 3c75d1d37d67f0f89c7321c62c483c91853383d6
-SHA256: 352a5e6686984e6d0b316811b0c45f4b4163792d666c95817782d25d421b920c
-SHA512: 09915ff9ca8e9433737d51f1646988e5bd64847a7590152e13a876caf26f7c9aff5204f0cf61719df97111f4620f382fcf93cb358a40406e98d3849225380dee
-Description: Package created with checkinstall 1.6.2
-
-Package: nii-xml-pdf
+Package: nii-tex-pdf
 Priority: optional
 Section: unknown
-Installed-Size: 141
+Installed-Size: 153
 Maintainer: tkana <tkana@kyagroup.com>
 Architecture: all
-Version: 1.0.0-1
-Depends: libyaml-perl, nii-xml-pdf-kyotocabinet-perl, libkyotocabinet-dev, libkyotocabinet16, libxml-libxml-perl
-Filename: ./nii-xml-pdf_1.0.0-1_all.deb
-Size: 17766
-MD5sum: 98a1ab2b6d4504d2555d7ebfcbf34305
-SHA1: b5f42ae6dd00c9875906898e24b0abb2816bd24e
-SHA256: 49229fd0eddb047e2f03f4a2bd3144985ee2ede436dddf932a3e405c913f0db7
-SHA512: 8fe1f083ccb27ade14de732c26b97c53470782703771fb1b69884da72a9845f73928f620d7bc59978dcda41336b0c0c57a42f3c2931bd22e7a3fa9788a47a2bb
+Version: 1.0.3-1
+Depends: libyaml-perl, nii-tex-pdf-kyotocabinet-perl, libkyotocabinet-dev, libkyotocabinet16, libxml-libxml-perl
+Filename: ./nii-tex-pdf_1.0.3-1_all.deb
+Size: 19030
+MD5sum: e68ef930a746d1f4e58b1c1b335e4151
+SHA1: b2e3ddb191cc1969f82448743820cf21f48e6f56
+SHA256: 28a84964033b625bc0b42e2a21a5a05d898e4650361161909cb262b3d426a78d
+SHA512: 3f06c601bb6eb58deeba197b9fe57d5886c588ccc917045a1d9628e827074c5f99ab213cc3c77167ee2a0c2c86c262b7dd6ff82f8e963e1f06f77273ec47f2d0
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
 Homepage: <insert the upstream URL, if relevant>
 
+Package: nii-tex-pdf-kyotocabinet-perl
+Priority: extra
+Section: checkinstall
+Installed-Size: 252
+Maintainer: tkana@kyagroup.com
+Architecture: amd64
+Version: 1.20-1
+Provides: nii-tex-pdf-kyotocabinet-perl
+Filename: ./nii-tex-pdf-kyotocabinet-perl_1.20-1_amd64.deb
+Size: 48690
+MD5sum: ab91c531da3734de5cd0ac80816f744d
+SHA1: f46d9baf6ca9be351dfad1ff152ec79f7a49cf41
+SHA256: a4b9e5b505190aceb5107c3dad7edd26dac1358884315d79eac5dd0f05969b2d
+SHA512: 89d2a98ac6e3b74503fb432db66783ff54ab221bc554c519440672510bccc8477910a55e9766bd2d18e773053f3af7ded492a9e6a2b81c640f4c4044945651ae
+Description: Package created with checkinstall 1.6.2
+
+Package: nii-tex-pdf-kyotocabinet-perl
+Priority: optional
+Section: unknown
+Installed-Size: 549
+Maintainer: root <root@unknown>
+Architecture: all
+Version: 1.20-1
+Filename: ./nii-tex-pdf-kyotocabinet-perl_1.20-1_all.deb
+Size: 100692
+MD5sum: d3ce19973d28555db0c56298dfadb5bb
+SHA1: dd9848eebe62afb1ee31162eb0500c4d9e33dbad
+SHA256: a8cce713b952269e5cbf9fcc6c17cfdc72181f27d80d139700e4f3daf5659a46
+SHA512: 52053a408f3154125e8a292146f758ed11ccb95e5cc5f19ab2845c13813a68551e44a1f73001ed9ea46792f3bdcdda9c3f6a9611e5ce7cd3cf40eb76baf8ace6
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+Homepage: <insert the upstream URL, if relevant>
 
